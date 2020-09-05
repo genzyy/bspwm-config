@@ -1,0 +1,31 @@
+#! /bin/sh
+
+# ] ---- AUTOSTART ---- [
+
+sxhkd &
+~/.fehbg
+setxkbmap pl &
+flameshot &
+picom -b &
+nm-applet &
+sh ~/.config/polybar/launch.sh
+
+# ] ---- WORKSPACES ---- [ 
+
+bspc monitor -d CODE WEB FILES HOME MUSIC EXTRA
+
+# ] ---- WINDOW CONFIG ---- [
+
+bspc config border_width         4
+bspc config window_gap         	40
+
+bspc config normal_border_color "#2A2426"
+bspc config focused_border_color "#ACB497"
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+
+bspc rule -a qutebrowser desktop=^6 follow=on
+bspc rule -a emacs desktop=^3 follow=on
+bspc rule -a spotify desktop=^2 follow=on
