@@ -1,8 +1,8 @@
 [colors]
-background = #38484D
-background-alt = #3f3a3c
-foreground = #e6d6ac
-color8 = #87af87
+background = #252046
+background-alt = #9578b4
+foreground = #c85f44
+color8 = #c85f44
 
 [bar/bar]
 
