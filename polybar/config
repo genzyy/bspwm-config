@@ -1,8 +1,8 @@
 [colors]
 background = #2a2426
-background-alt = #3f3a3c
-foreground = #3f3a3c
-color8 = #3f3a3c
+background-alt = #d48448
+foreground = #d48448
+color8 = #d48448
 
 [bar/bar]
 
@@ -44,7 +44,7 @@ foramt-prefix-padding = 2
 pin-workspaces = true
 
 label-empty-foreground = #7f7c7d
-label-focused-foreground = #87af87
+label-focused-foreground = #1c1c24
 label-focused-background = ${colors.background-alt} 
 label-focused = %name%
 label-focused-padding = 2
@@ -80,10 +80,10 @@ time = %H:%M | %d/%m/%y
 format = <label>
 format-prefix = TIME:
 format-prefix-padding = 1
-format-foreground = #87af87
+format-foreground = #d48448
 format-padding = 2
 label = %time%
-label-foreground = #e6d6ac
+label-foreground = #dccda5
 
 [module/battery]
 type = internal/battery
@@ -102,7 +102,7 @@ label-discharging-foreground = #e6d6ac
 label-full-foreground = #e6d6ac
 
 format-charging-foreground = #87af87
-format-discharging-foreground = #87af87
+format-discharging-foreground = #d48448
 format-full-foreground = #87af87
 
 format-charging-padding = 2
@@ -129,6 +129,6 @@ format-volume = VOL: <label-volume>
 label-muted = muted
 label-muted-padding = 2
 label-volume-foreground = #e6d6ac
-format-volume-foreground = #87af87
+format-volume-foreground = #d48448
 format-volume-padding = 2
 

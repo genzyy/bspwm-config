@@ -9,7 +9,7 @@ configuration {
     ayu-text-selection-color:    #FFCC66;
     
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
-    font:                        "PragmataProMono 11.5";
+    font:                        "Liberation Mono 15";
     foreground:                  @ayu-text-color;
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 0 );
