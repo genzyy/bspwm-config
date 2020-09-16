@@ -1,8 +1,8 @@
 [colors]
 background = #2a2426
-background-alt = #3f3a3c
-foreground = #3f3a3c
-color8 = #3f3a3c
+background-alt = #659e9d
+foreground = #659e9d
+color8 = #d4d4d8
 
 [bar/bar]
 
@@ -22,9 +22,9 @@ offset-x = 0
 
 font-0 = Pragmata Pro Mono:style=Bold:pixelsize=10;3
 
-modules-left = ncspot
+modules-left = ncspot network
 modules-center = bspwm
-modules-right = alsa battery time wlan1
+modules-right = alsa battery time
 
 [module/rofi]
 type = custom/text
@@ -44,7 +44,7 @@ foramt-prefix-padding = 2
 pin-workspaces = true
 
 label-empty-foreground = #7f7c7d
-label-focused-foreground = #87af87
+label-focused-foreground = #1c1c24
 label-focused-background = ${colors.background-alt} 
 label-focused = %name%
 label-focused-padding = 2
@@ -80,10 +80,10 @@ time = %H:%M | %d/%m/%y
 format = <label>
 format-prefix = TIME:
 format-prefix-padding = 1
-format-foreground = #87af87
+format-foreground = #659e9d
 format-padding = 2
 label = %time%
-label-foreground = #e6d6ac
+label-foreground = #dccda5
 
 [module/battery]
 type = internal/battery
@@ -102,7 +102,7 @@ label-discharging-foreground = #e6d6ac
 label-full-foreground = #e6d6ac
 
 format-charging-foreground = #87af87
-format-discharging-foreground = #87af87
+format-discharging-foreground = #659e9d
 format-full-foreground = #87af87
 
 format-charging-padding = 2
@@ -119,7 +119,7 @@ accumulate-stats = true
 format-connected = WIFI: <label-connected>
 label-connected = %essid%
 format-connected-padding = 2
-format-connected-foreground = #6c8c9c
+format-connected-foreground = #659e9d
 label-connected-foreground = ${colors.color8}
 
 [module/alsa]
@@ -129,6 +129,6 @@ format-volume = VOL: <label-volume>
 label-muted = muted
 label-muted-padding = 2
 label-volume-foreground = #e6d6ac
-format-volume-foreground = #87af87
+format-volume-foreground = #659e9d
 format-volume-padding = 2
 

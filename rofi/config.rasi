@@ -9,7 +9,7 @@ configuration {
     ayu-text-selection-color:    #FFCC66;
     
     selected-normal-foreground:  rgba ( 255, 255, 255, 100 % );
-    font:                        "PragmataProMono 11.5";
+    font:                        "JetBrainsMono Bold 12";
     foreground:                  @ayu-text-color;
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 0, 0, 0, 0 );
@@ -23,7 +23,7 @@ configuration {
     selected-active-foreground:  rgba ( 127, 255, 242, 100 % );
     alternate-active-background: rgba ( 0, 0, 0, 0 );
     background:                  rgba ( 0, 0, 0, 0 );
-    bordercolor:                 rgba ( 0, 0, 0, 0 );
+    bordercolor:                 #6f5a78;
     alternate-normal-foreground: @foreground;
     normal-background:           rgba ( 0, 0, 0, 0 );
     lightfg:                     rgba ( 88, 104, 117, 100 % );
@@ -42,7 +42,7 @@ configuration {
 }
 #window {
     background-color: @real-background;
-    border:           0;
+    border:           4;
     padding:          0;
     location:         center;
     anchor:           center;
@@ -50,7 +50,7 @@ configuration {
     height: 60%;
 }
 #mainbox {
-    border:  0;
+    border:  4;
     padding: 80;
 }
 #message {
@@ -72,7 +72,7 @@ configuration {
     dynamic: false;
 }
 #element {
-    border:  0;
+    border:  4;
     padding: 1px ;
 }
 #element.normal.normal {
@@ -104,7 +104,7 @@ configuration {
 }
 #scrollbar {
     width:        4px ;
-    border:       0;
+    border:       4;
     handle-width: 8px ;
     padding:      0;
 }

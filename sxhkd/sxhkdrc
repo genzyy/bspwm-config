@@ -10,6 +10,9 @@ super + Escape
 super + d
 	rofi -show drun
 
+alt + d
+	rofi -show windowcd
+
 # alacritty
 super + Return
 	xfce4-terminal
