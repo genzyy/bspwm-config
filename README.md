@@ -59,3 +59,6 @@ config can be used by anyone willing to use bspwm. Also these packages will most
 | `picom.conf` | `~/.config/` |
 | `rofi` | `~/.config/` (entire folder) |
 | `polybar`| `~/.config/` (entire folder) |
+
+## Other Themes ##
+You can also check out my other themes as they are available as the branches of the master repo.
