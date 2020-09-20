@@ -62,6 +62,6 @@ config can be used by anyone willing to use bspwm. Also these packages will most
 
 ## Other Themes ##
 You can also check out my other themes as they are available as the branches of the master repo.
-[black-gold](https://github.com/RishitPandey/bspwm-config/tree/black-gold)
-[sweet-theme](https://github.com/RishitPandey/bspwm-config/tree/sweet-theme)
-[master](https://github.com/RishitPandey/bspwm-config/tree/master)
+[black-gold](https://github.com/RishitPandey/bspwm-config/tree/black-gold)<br/>
+[sweet-theme](https://github.com/RishitPandey/bspwm-config/tree/sweet-theme)<br/>
+[master](https://github.com/RishitPandey/bspwm-config/tree/master)<br/>
