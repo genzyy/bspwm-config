@@ -51,6 +51,8 @@ config can be used by anyone willing to use bspwm. Also these packages will most
   
 <a name="file-structure"></a>
 ## File Structure ##
+
+| Folder from repository | Where to place? |
 | :---------------------:| :-----------------:|
 | `bspwm` | `~/.config/`(entire folder) |
 | `sxhkd` | `~/.config/` (entire folder) |
