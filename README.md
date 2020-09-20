@@ -61,7 +61,7 @@ config can be used by anyone willing to use bspwm. Also these packages will most
 | `polybar`| `~/.config/` (entire folder) |
 
 ## Other Themes ##
-You can also check out my other themes as they are available as the branches of the master repo.
+You can also check out my other themes as they are available as the branches of the master repo.<br/>
 [black-gold](https://github.com/RishitPandey/bspwm-config/tree/black-gold)<br/>
 [sweet-theme](https://github.com/RishitPandey/bspwm-config/tree/sweet-theme)<br/>
-[master](https://github.com/RishitPandey/bspwm-config/tree/master)<br/>
+[master](https://github.com/RishitPandey/bspwm-config/tree/master)
