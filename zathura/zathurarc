@@ -1,0 +1,8 @@
+set default-bg "#282828"
+set font "CaskaydiaCove Nerd Font Mono 10"
+set inputbar-bg "#3b4252"
+set completion-bg "#3b4252"
+set statusbar-bg "#3b4252"
+set page-padding 15
+set recolor-lightcolor "#282828"
+set guioptions none
