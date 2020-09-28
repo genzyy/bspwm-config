@@ -4,7 +4,7 @@
 
 ## My Setup ##
 
-![bspwm](screenshot.png)
+![bspwm]()
 
 ## Contents ##
 - [OS Details](#details)
