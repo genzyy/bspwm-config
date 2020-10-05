@@ -1,134 +1,120 @@
 [colors]
-background = #2a2426
-background-alt = #3f3a3c
-foreground = #3f3a3c
-color8 = #3f3a3c
+black = #1C1E26
+bblack = #2c3073
+white = #D7B7BB
+red = #FF4EA5
+green = #7EB564
+yellow = #F5B569
+blue = #7A89EC
+magenta = #B66CDC
+cyan = #6CAC99
 
-[bar/bar]
-
-override-redirect = false 
+[bar/mainbar]
+monitor = "eDP-1"
+background = ${colors.black}
+foreground = ${colors.white}
+font-0 = JetBrains Mono:size=9;3
+font-1 = Font Awesome 5 Free Solid:size=8;3
+font-2 = Font Awesome 5 Brands:size=8;3
+font-3 = Sans:size=5;3
 wm-restack = bspwm
-bottom = false
-background = ${colors.background}
-foreground = ${colors.foreground}
-fixed-center = true
-width = 100%
-height = 26
-radius = 0.0
-line-size = 0
-line-color = #f00
-offset-y = 0
-offset-x = 0
+border-size = 5
+border-color = ${colors.black}
+height = 20
+modules-left = bspwm
+modules-right = wtitle s music s network s bat s vol s date s time
 
-font-0 = Pragmata Pro Mono:style=Bold:pixelsize=10;3
-
-modules-left = ncspot
-modules-center = bspwm
-modules-right = alsa battery time wlan1
-
-[module/rofi]
+[module/s]
 type = custom/text
-content = MENU
-click-left = rofi -show drun -location 1 -xoffset 39 -yoffset 73
-click-right = rofi -show window -location 1 -xoffset 39 -yoffset 73
-enable-click = true
-content-foreground = #a09f69
-content-padding = 2
+content = "%{T4}  %{T-}"
+content-background = ${colors.black}
+
+[module/wtitle]
+type = internal/xwindow
+label = "%title% "
+label-empty = "Desktop "
+label-maxlen = 40
 
 [module/bspwm]
 type = internal/bspwm
-index-sort = true
-enable-click = true
 format = <label-state>
-foramt-prefix-padding = 2
-pin-workspaces = true
+label-occupied-foreground = ${colors.white}
+label-focused-foreground = ${colors.black}
+label-empty-foreground = ${colors.bblack}
+label-occupied-background = ${colors.bblack}
+label-focused-background = ${colors.white}
+label-focused = "%icon% %name%"
+label-occupied = "%icon% %name%"
+label-empty = "%icon% %name%"
+label-focused-padding = 1
+label-occupied-padding = 1
+label-empty-padding = 1
+label-separator = "%{T4}  %{T-}"
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
 
-label-empty-foreground = #7f7c7d
-label-focused-foreground = #87af87
-label-focused-background = ${colors.background-alt} 
-label-focused = %name%
-label-focused-padding = 2
-label-occupied = %name%
-label-occupied-padding = 2
-label-occupied-foreground = #e6d6ac
-label-empty = %name%
-label-empty-padding = 2
+[module/music]
+type = internal/mpd
+host = 127.0.0.1
+port = 6600
+format-online = <label-song>
+format-playing = ${self.format-online}
+format-paused = ${self.format-online}
+format-stopped = ${self.format-online}
+format-offline = ${self.label-offline}
+label-song = "  %artist% - %title% "
+label-offline = "  Offline "
+label-song-foreground = ${colors.black}
+label-song-background = ${colors.green}
+format-offline-foreground = ${colors.black}
+format-offline-background = ${colors.green}
 
-[settings]
-label-focused-underline= ${colors.foreground}
-throttle-output = 5
-throttle-output-for = 10
-throttle-input-for = 30
-screenchange-reload = true
-pseudo-transparency = false
+[module/vol]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+format-volume = <label-volume>
+format-muted = <label-muted>
+label-muted = "  Muted "
+label-volume = "  %percentage%% "
+format-volume-background = ${colors.blue}
+format-volume-foreground = ${colors.black}
+format-muted-background = ${colors.blue}
+format-muted-foreground = ${colors.black}
 
-[module/ncspot]
-type = custom/script
-exec = playerctl -p ncspot metadata --format '{{artist}} - {{title}}'
-exec-if = "pgrep ncspot"
-format-foreground =  #e6d6ac
-format-padding = 1
-format-prefix = MUSIC:
-format-prefix-padding = 1
-format-prefix-foreground = #87af87
-tail = false
-interval = 3
-
-[module/time]
-type = internal/date
-time = %H:%M | %d/%m/%y
-format = <label>
-format-prefix = TIME:
-format-prefix-padding = 1
-format-foreground = #87af87
-format-padding = 2
-label = %time%
-label-foreground = #e6d6ac
-
-[module/battery]
+[module/bat]
 type = internal/battery
-battery = BAT0
-adapter = AC
-full-at = 98%
-
-format-charging = BAT: <label-charging>
-format-discharging = BAT: <label-discharging>
-format-full = BAT: <label-full>
-label-charging = %percentage%%
-label-discharging = %percentage%%
-
-label-charging-foreground = #e6d6ac
-label-discharging-foreground = #e6d6ac
-label-full-foreground = #e6d6ac
-
-format-charging-foreground = #87af87
-format-discharging-foreground = #87af87
-format-full-foreground = #87af87
-
-format-charging-padding = 2
-format-discharging-padding = 2
-format-full-padding = 2
+bat = BAT0
+adapter = ADP0
+format-charging = <label-charging>
+format-discharging = <label-discharging>
+label-discharging = "  %percentage%% "
+label-charging = "  %percentage%% "
+label-discharging-background = ${colors.magenta}
+label-charging-foreground = ${colors.black}
+label-charging-background = ${colors.magenta}
+label-discharging-foreground = ${colors.black}
 
 [module/network]
 type = internal/network
-interface = wlp0s20f0u3
-interval = 3.0
-unknown-as-up = true
-accumulate-stats = true
+interface = wlan0
+label-disconnected = "  No wifi "
+label-connected = "  %essid% "
+label-connected-foreground = ${colors.black}
+label-connected-background = ${colors.red}
+label-disconnected-foreground = ${colors.black}
+label-disconnected-background = ${colors.red}
 
-format-connected = WIFI: <label-connected>
-label-connected = %essid%
-format-connected-padding = 2
-format-connected-foreground = #6c8c9c
-label-connected-foreground = ${colors.color8}
+[module/date]
+type = internal/date
+format-foreground = ${colors.black}
+format-background = ${colors.cyan}
+date = "  %a, %b %d "
 
-[module/alsa]
-type = internal/alsa
-
-format-volume = VOL: <label-volume>
-label-muted = muted
-label-muted-padding = 2
-label-volume-foreground = #e6d6ac
-format-volume-foreground = #87af87
-format-volume-padding = 2
-
+[module/time]
+type = internal/date
+format-foreground = ${colors.black}
+format-background = ${colors.yellow}
+date = "  %H:%M "

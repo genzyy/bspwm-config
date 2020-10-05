@@ -10,9 +10,12 @@ super + Escape
 super + d
 	rofi -show drun
 
+alt + d
+	rofi -show window
+
 # alacritty
 super + Return
-	xfce4-terminal
+	alacritty
 
 # qutebrowser
 super + shift + q
