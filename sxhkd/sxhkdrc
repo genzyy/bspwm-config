@@ -10,9 +10,12 @@ super + Escape
 super + d
 	rofi -show drun
 
+alt + d
+	rofi -show windowcd
+
 # alacritty
 super + Return
-	xfce4-terminal
+	alacritty
 
 # qutebrowser
 super + shift + q
@@ -34,6 +37,18 @@ Print
 
 XF86AudioRaiseVolume
 	pactl set-sink-volume @DEFAULT_SINK@ +10%
+
+#Music Controls
+# songs control
+XF86Audio{Next,Prev}
+	playerctl {next,previous}
+# pause/play
+{XF86AudioPlay,super + slash}
+	playerctl play-pause
+# stop
+XF86AudioStop
+	playerctl stop
+
 
 #Volume
 XF86AudioLowerVolume
@@ -140,3 +155,11 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#  ] ----- BRIGHTNESS CONTROL ----- [
+
+XF86MonBrightnessUp
+  brightnessctl -q s 5%+
+
+XF86MonBrightnessDown
+  brightnessctl -q s 5%-

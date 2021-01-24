@@ -1,6 +1,6 @@
 [colors]
 background = #020221
-background-alt = #ff79c6
+background-alt = #7661a0
 foreground = #659e9d
 color8 = #d4d4d8
 
@@ -80,7 +80,7 @@ time = %H:%M | %d/%m/%y
 format = <label>
 format-prefix = TIME:
 format-prefix-padding = 1
-format-foreground = #ff79c6
+format-foreground = #7661a0
 format-padding = 2
 label = %time%
 label-foreground = #e6d6ac
@@ -102,7 +102,7 @@ label-discharging-foreground = #e6d6ac
 label-full-foreground = #e6d6ac
 
 format-charging-foreground = #87af87
-format-discharging-foreground = #ff79c6
+format-discharging-foreground = #7661a0
 format-full-foreground = #87af87
 
 format-charging-padding = 2
@@ -119,7 +119,7 @@ accumulate-stats = true
 format-connected = WIFI: <label-connected>
 label-connected = %essid%
 format-connected-padding = 2
-format-connected-foreground = #ff79c6
+format-connected-foreground = #7661a0
 label-connected-foreground = ${colors.color8}
 
 [module/alsa]
@@ -129,6 +129,6 @@ format-volume = VOL: <label-volume>
 label-muted = muted
 label-muted-padding = 2
 label-volume-foreground = #e6d6ac
-format-volume-foreground = #ff79c6
+format-volume-foreground = #7661a0
 format-volume-padding = 2
 
